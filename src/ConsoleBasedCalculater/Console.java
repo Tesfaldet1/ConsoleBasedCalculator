@@ -7,7 +7,7 @@ public class Console {
         while (_calculate) //creates lop to top
         {
             System.out.println("Hello this is my calculator! ");
-            System.out.println("For addition, type add,, for subtraction, type sub");
+            System.out.println("For addition, type add, for subtraction, type sub");
             System.out.println("For multiplication, type mul, for division, type div");
 
             //set up scanner
@@ -21,7 +21,7 @@ public class Console {
                 System.out.println("type the second number");
                 int _addNumber2 = scan.nextInt();
                 int _sumOfTheNumber = _addNumber1 + _addNumber2;
-                System.out.println(_addNumber1 + "  added to " + _addNumber2 + " = " + _sumOfTheNumber);
+                System.out.println(_addNumber1 + " + " + _addNumber2 + " = " + _sumOfTheNumber);
             }
             if ("sub".equals(ranInput)) {
                 System.out.println("Type the number you would like to subtract ");
@@ -29,7 +29,7 @@ public class Console {
                 System.out.println("type the second number");
                 int _subNumber2 = scan.nextInt();
                 int _subOfTheNumber = _subNumber1 - _subNumber2;
-                System.out.println(_subNumber1 + "  subtracted by " + _subNumber2 + " = " + _subOfTheNumber);
+                System.out.println(_subNumber1 + " - " + _subNumber2 + " = " + _subOfTheNumber);
 
             }
             if ("mul".equals(ranInput)) {
@@ -38,7 +38,7 @@ public class Console {
                 System.out.println("type the second number");
                 int _mulNumber2 = scan.nextInt();
                 int _mulOfTheNumber = _mulNumber1 * _mulNumber2;
-                System.out.println(_mulNumber1 + "  multiplied by " + _mulNumber2 + " = " + _mulOfTheNumber);
+                System.out.println(_mulNumber1 + " x " + _mulNumber2 + " = " + _mulOfTheNumber);
 
             }
             if ("div".equals(ranInput)) {
@@ -46,8 +46,12 @@ public class Console {
                 int _divNumber1 = scan.nextInt();
                 System.out.println("type the second number");
                 int _divNumber2 = scan.nextInt();
+                while(_divNumber2 == 0){
+                    System.out.println("you can not divide by 0: please  enter the second number");
+                    _divNumber2 = scan.nextInt();
+                }
                 int _divOfTheNumber = _divNumber1 / _divNumber2;
-                System.out.println(_divNumber1 + "  divided by " + _divNumber2 + " = " + _divOfTheNumber);
+                System.out.println(_divNumber1 + "/" + _divNumber2 + " = " + _divOfTheNumber);
 
             }
             System.out.println("Do you want to start again? (yes,no)");
